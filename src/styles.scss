@@ -1,1 +1,73 @@
 /* You can add global styles to this file, and also import other style files */
+
+//essential
+*, ::after, ::before {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+//basic variables
+:root {
+    --block-padding: 5rem;
+    --inline-padding: 5rem;
+}
+
+@media (max-width: 991px) {
+    :root {
+        --block-padding: 3rem;
+        --inline-padding: 3rem;
+    }
+}
+
+@media (max-width: 767px) {
+    :root {
+        --inline-padding: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        --inline-padding: 1rem;
+    }
+}
+
+
+//basic styles
+@mixin d-flex($jc:center, $ai:center, $w:100%, $direction:row, $z:0) {
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+    width: $w;
+    flex-direction: $direction;
+    z-index: $z; 
+}
+
+.d-flex {
+    @include d-flex();
+}
+
+.w100 {
+    width: 100%;
+}
+
+.h100vh {
+    height: 100vh;
+}
+
+.flex-d-column {
+    flex-direction: column;
+}
+
+.flex-d-row {
+    flex-direction: row;
+}
+
+.max-width {
+    max-width: 1500px;
+}
+
+.padding-inline {
+    padding: var(--inline-padding) var(--inline-padding);
+}
+
+
