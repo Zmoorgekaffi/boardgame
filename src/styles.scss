@@ -14,20 +14,20 @@
 
 @media (max-width: 991px) {
     :root {
-        --block-padding: 3rem;
-        --inline-padding: 3rem;
+        --block-padding: 5rem;
+        --inline-padding: 5rem;
     }
 }
 
 @media (max-width: 767px) {
     :root {
-        --inline-padding: 2rem;
+        --inline-padding: 1.3rem;
     }
 }
 
 @media (max-width: 480px) {
     :root {
-        --inline-padding: 1rem;
+        --inline-padding: 0.3rem;
     }
 }
 
@@ -48,6 +48,10 @@
 
 .w100 {
     width: 100%;
+}
+
+.h100 {
+    height: 100%;
 }
 
 .h100vh {
